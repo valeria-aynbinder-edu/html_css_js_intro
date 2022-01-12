@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function displayDate() {
+            // change html content
+            document.getElementById('demo').innerHTML = Date()
+
+            // change attribute
+            document.getElementById('refresh_btn').style.visibility = "visible"
+            
+            // change CSS
+            h2_elements = document.getElementsByTagName('h2')
+            for (let index = 0; index < h2_elements.length; index++) {
+                const element = h2_elements[index];
+                element.style.color = "purple"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Date example</h2>
+    <h2>A beautiful day!</h2>
+
+    <button type="button" onclick="displayDate()">Click me to display Date and Time</button>
+
+    <p id ="demo"></p>
+
+    <button id="refresh_btn" style="visibility: hidden;">Refresh date</button>
+
+</body>
+</html>
